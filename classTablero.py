@@ -92,6 +92,3 @@ class Tablero:
                     print(f" {celda}", end=" ")
             print()
     
-    def obtener_estadisticas(self):
-        barcos_vivos = sum(1 for b in self.barcos if not b.hundido())
-        return {"total": len(self.barcos), "vivos": barcos_vivos}

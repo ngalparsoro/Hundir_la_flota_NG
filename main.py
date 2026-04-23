@@ -10,9 +10,9 @@ from functions import crear_barcos, turno_jugador, turno_maquina
 # PROGRAMA PRINCIPAL
 
 def jugar():
-    print("\n" + "="*40)
+    print("\n" + "_"*100)
     print("¡HUNDIR LA FLOTA!")
-    print("="*40)
+    print("_"*100)
     print("\nBarcos:")
     for nombre, eslora, cantidad in BARCOS:
         print(f"  • {cantidad} x {nombre} (tamaño {eslora})")
@@ -24,9 +24,9 @@ def jugar():
     vista_jugador = Tablero()
     
     # Colocar barcos del jugador
-    print("\n" + "="*40)
+    print("\n" + "_"*100)
     print("COLOCA TUS BARCOS")
-    print("="*40)
+    print("_"*100)
     
     for barco in crear_barcos():
         while True:
@@ -57,10 +57,6 @@ def jugar():
     turno_jugador_activo = True
     
     while True:
-        # Mostrar estado
-        stats = jugador.obtener_estadisticas()
-        print(f"\nTus barcos restantes: {stats['vivos']}/{stats['total']}")
-        
         print("\nTU TABLERO:")
         maquina.mostrar(ocultar=False) # Se visualizan los barcos en la demo.
         #vista_jugador.mostrar()
@@ -68,24 +64,25 @@ def jugar():
         jugador.mostrar(ocultar=False)
         
         if turno_jugador_activo:
-            print("\n ¡ES TU TURNO!")
+            print("\n" *2)
             repite = turno_jugador(maquina, vista_maquina)
             
             if maquina.todos_hundidos():
-                print("\n" + "="*40)
-                print("¡FELICIDADES! ¡HAS GANADO!")
-                print("="*40)
+                print("\n" + "_"*100)
+                print("ZORIONAK WINNER")
+                print("_"*100)
                 break
             
             if not repite:
                 turno_jugador_activo = False
         else:
+            input("\nLa maquina ya ha disparado, presiona Enter para pasar a tu turno")
             repite = turno_maquina(jugador, vista_jugador)
             
             if jugador.todos_hundidos():
-                print("\n" + "="*40)
-                print("GAME OVER. Perdiste.")
-                print("="*40)
+                print("\n" + "100"*40)
+                print("GAME OVER.")
+                print("_"*100)
                 break
             
             if not repite:

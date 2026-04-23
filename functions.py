@@ -18,9 +18,9 @@ def crear_barcos():
 
 def turno_jugador(tablero_enemigo, tablero_vista):
     """Turno del jugador"""
-    print("\n" + "="*40)
+    print("\n" + "_"*100)
     print("TU TURNO")
-    print("="*40)
+    print("_"*100)
     
     tablero_vista.mostrar(ocultar = False)
     
@@ -32,7 +32,7 @@ def turno_jugador(tablero_enemigo, tablero_vista):
                 break
             print(f"Usa números 0-{TAMANO-1}")
         except:
-            print("Ejemplo: 5 3")
+            print("Error, mete dos números separados: 5 3")
     
     resultado = tablero_enemigo.disparar(fila, col)
     tablero_vista.rejilla[fila, col] = tablero_enemigo.rejilla[fila, col]
@@ -50,13 +50,14 @@ def turno_jugador(tablero_enemigo, tablero_vista):
     elif resultado[0] == "hundido":
         print(f"¡HUNDIDO! ({resultado[1]})")
         print("¡Repites!")
+        input("\nPresiona Enter...")
         return True
 
 def turno_maquina(tablero_jugador, tablero_vista):
     """Turno de la máquina"""
-    print("\n" + "="*40)
+    print("\n" + "_"*100)
     print("TURNO DE LA MÁQUINA")
-    print("="*40)
+    print("_"*100)
     
     # Disparo aleatorio
     while True:
