@@ -12,7 +12,7 @@ El jugador coloca sus barcos manualmente y compite contra una máquina que coloc
 - Colocación **manual** de barcos por parte del jugador.
 - Colocación **aleatoria** de barcos por parte de la máquina.
 - Sistema de disparos con:
-  - "# Agua"
+  - '#' Agua
   - X Tocado
   - X Hundido
   - Repetición de turno al acertar
@@ -55,7 +55,7 @@ Incluye las funciones principales del juego:
 - `turno_maquina()`  
 
 ### `variables.py`
-Contiene la configuración del juego:
+Contiene la configuración del juego
 
 ### `main.py`
 Archivo principal que ejecuta el juego:
@@ -78,7 +78,7 @@ Archivo principal que ejecuta el juego:
    - Orientación (horizontal o vertical)
 
 3. Una vez colocados todos los barcos, comienza la batalla:
-   - Introduce coordenadas para disparar (ej: `A5` o `3 7`)
+   - Introduce coordenadas para disparar (ej: `3 7`)
    - Si aciertas, repites turno
    - Gana quien hunda **todos** los barcos del rival
 
