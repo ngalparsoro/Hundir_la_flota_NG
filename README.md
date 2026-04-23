@@ -12,9 +12,9 @@ El jugador coloca sus barcos manualmente y compite contra una máquina que coloc
 - Colocación **manual** de barcos por parte del jugador.
 - Colocación **aleatoria** de barcos por parte de la máquina.
 - Sistema de disparos con:
-  - '#' Agua
-  - X Tocado
-  - X Hundido
+  - `#` Agua
+  - `X` Tocado
+  - `X` Hundido
   - Repetición de turno al acertar
 - Visualización del tablero del jugador y de la máquina.
 
