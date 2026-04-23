@@ -17,19 +17,19 @@ El jugador coloca sus barcos manualmente y compite contra una máquina que coloc
   - X Hundido
   - Repetición de turno al acertar
 - Visualización del tablero del jugador y de la máquina.
-- Lógica completa de victoria y derrota.
 
 ---
 
 ## Estructura del proyecto
 ```
-📦 hundir_la_flota
+hundir_la_flota
 ├── classBarco.py
 ├── classTablero.py
 ├── functions.py
 ├── variables.py
 ├── main.py
-└── README.md````
+└── README.md
+```
 
 
 ### `classBarco.py`
@@ -67,12 +67,12 @@ Archivo principal que ejecuta el juego:
 
 ---
 
-## ▶️ Cómo jugar
+## Cómo jugar
 
 1. Ejecuta el archivo principal:
    ```bash
    python main.py
-   
+
 2. Coloca tus barcos indicando:
    - Fila y columna inicial
    - Orientación (horizontal o vertical)
@@ -84,13 +84,7 @@ Archivo principal que ejecuta el juego:
 
 ---
 
-## 🎯 Objetivo del juego
+## Dependencias
 
-Hundir todos los barcos de la máquina **antes** de que ella hunda los tuyos.
-
----
-
-## 🧩 Dependencias
-
-- **Python 3.8+**
+- **Python 3.12**
 - **NumPy**
