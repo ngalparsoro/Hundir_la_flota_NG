@@ -1,4 +1,3 @@
-'''from classTablero import Tablero'''
 
 import numpy as np
 
