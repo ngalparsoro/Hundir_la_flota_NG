@@ -1,7 +1,6 @@
-'''from classBarco import Barco'''
-
 
 # CLASE BARCO
+
 class Barco:
     def __init__(self, nombre, eslora):
         self.nombre = nombre

@@ -20,7 +20,6 @@ class Tablero:
         """Coloca un barco si es posible"""
         posiciones = []
         
-        # Verificar si cabe
         if horizontal:
             if col + barco.eslora > TAMANO:
                 return False
